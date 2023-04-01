@@ -1,0 +1,11 @@
+1 - seleccionar los registros cuyo nombre termien en "a"
+2 - seleccionar el idcliente nombre y apellido de los que tengan email terminen en .gov
+3 - seleccionar el nombre y apellido de los id_clientes que se encuentren entre 20 y 50
+4 - selecionar el nombre direccion y telefono cuyos apellidos termine en "e"
+5 - actualizar la direccion a humberto 2252 de los id_clientes 1 , 5, 20, 35, 96
+
+select * from TablaClientes where Nombre like '%a';
+SELECT Id_Cliente, Nombre, Apellido from TablaClientes where Email like '%.gov';
+SELECT Nombre, Apellido from TablaClientes where Id_Cliente BETWEEN 20 and 50;
+SELECT Nombre, Direccion, Telefono from TablaClientes where Apellido like '%e';
+UPDATE TablaClientes set Direccion = 'Humberto 2252' where Id_Cliente in (1, 5, 20, 35, 96);
